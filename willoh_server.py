@@ -8,7 +8,7 @@ visit_count = 0
 
 # Server configuration
 HOST = '0.0.0.0'
-PORT = 5090         # Port to listen on
+PORT = 5091         # Port to listen on
 
 # Create a TCP socket
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

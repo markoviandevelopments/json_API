@@ -2,8 +2,8 @@ import socket
 import json
 
 # Server configuration (must match the server's HOST and PORT)
-HOST = '192.168.1.126'
-PORT = 5090
+HOST = '192.168.1.246'
+PORT = 5091
 
 # Create a TCP socket
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
