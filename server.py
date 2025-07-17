@@ -3,6 +3,8 @@ import time
 import random
 import json
 
+visit_count = 0
+
 # Server configuration
 HOST = '0.0.0.0'
 PORT = 5090         # Port to listen on
@@ -22,7 +24,8 @@ while True:
     # Generate data
     data = {
         "epoch_time": time.time(),
-        "random_number": random.random()
+        "random_number": random.random(),
+        "num visits": visit_count
     }
     
     # Convert to JSON
@@ -31,5 +34,7 @@ while True:
     # Send JSON data to client
     client_socket.sendall(json_data.encode('utf-8'))
     
+    visit_count += 1
+
     # Close the client connection
     client_socket.close()
