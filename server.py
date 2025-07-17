@@ -16,6 +16,8 @@ server_socket.listen(1)  # Listen for incoming connections (backlog of 1)
 
 print(f"Server listening on {HOST}:{PORT}")
 
+tribal_name = ["Walking Snake", "Running Tiger", "Singing Bear"]
+
 while True:
     # Accept a client connection
     client_socket, addr = server_socket.accept()
@@ -25,7 +27,8 @@ while True:
     data = {
         "epoch_time": time.time(),
         "random_number": random.random(),
-        "num visits": visit_count
+        "num visits": visit_count,
+        "tribal name": random.choice(tribal_name)
     }
     
     # Convert to JSON
