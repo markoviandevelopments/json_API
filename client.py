@@ -21,6 +21,7 @@ parsed_data = json.loads(json_data)
 # Print the received data
 print("Received JSON:")
 print(parsed_data)
+print(f"Random Number: {parsed_data['random_number']}")
 
 # Close the socket
 client_socket.close()
